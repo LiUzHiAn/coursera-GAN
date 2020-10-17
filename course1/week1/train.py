@@ -69,9 +69,9 @@ z_dim = 64
 display_step = 2000
 batch_size = 128
 lr = 1e-5
-device = 'cpu'
+device = 'cuda:0'
 # Load MNIST dataset as tensors
-dataset_root = "~/common_datasets/MNIST"
+dataset_root = "/home/liuzhian/hdd/datasets/MNIST"
 
 dataloader = DataLoader(
     MNIST(root=dataset_root, download=True, transform=transforms.ToTensor()),
