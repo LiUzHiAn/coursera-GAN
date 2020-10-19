@@ -94,11 +94,14 @@ for epoch in range(n_epochs):
         mean_generator_loss += gen_loss.item() / display_step
 
         ## Visualization code ##
+        if not os.path.exists("vis"):
+            os.mkdir("vis")
         if cur_step % display_step == 0 and cur_step > 0:
             print(
-                f"Step {cur_step}: Generator loss: {mean_generator_loss}, discriminator loss: {mean_discriminator_loss}")
-            show_tensor_images(fake, fig_save_name="./vis/%d_fake.png" % cur_step)
-            show_tensor_images(real, fig_save_name="./vis/%d_real.png" % cur_step)
+                f"Step %d: Generator loss: %.4f, discriminator loss: %.4f"
+                % (cur_step, mean_generator_loss, mean_discriminator_loss))
+            show_tensor_images((fake + 1) / 2, fig_save_name="./vis/%d_fake.png" % cur_step)
+            show_tensor_images((real + 1) / 2, fig_save_name="./vis/%d_real.png" % cur_step)
             mean_generator_loss = 0
             mean_discriminator_loss = 0
         cur_step += 1

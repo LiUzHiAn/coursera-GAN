@@ -7,7 +7,7 @@ Don't expect anything spectacular: this is only the first lesson. The results wi
 as you learn methods to help keep your generator and discriminator at similar levels. 
 
 # Configuration
-You can modify the [parameters-setting](./train.pyL65-#L74) before training.
+You can modify the [parameters-setting](./train.py#L65-#L74) before training.
 
 # Train
 ```shell

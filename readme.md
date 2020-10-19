@@ -13,7 +13,7 @@ original jupyter notebook. Check it out [>>here<<](https://github.com/sahilkhose
 # Contents
 - *Course 1 - Build Basic Generative Adversarial Networks (GANs)*
    1. Week 1 - [Your First GAN](course1/week1)  
-
+   2. Week 2 - [Deep Convolutional GAN (DCGAN)](course1/week2)
 
  
 # Contributing 
